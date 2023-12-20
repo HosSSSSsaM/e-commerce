@@ -111,6 +111,7 @@ if(cart != ""){
     cart = JSON.parse(localStorage.getItem("product"))
 }else{
     cart = []
+    
 }
 function addtocart(e){
     if(products[e].quantity == 0){
@@ -254,19 +255,3 @@ let year = date.getFullYear()
 document.querySelector(".copyright div span").innerHTML = `${year}`
 
 
-var to_top =document.querySelector(".to_top");
-document.onscroll =function(){
-if(window.scrollY > 300){
-    $(".to_top").show(2000)
-}else{
-    $(".to_top").hide(1000)
-
-}
-}
-
-to_top.onclick = function(){
-    window.scrollTo({
-    top:0,
-    behavior:"smooth",
-})
-}

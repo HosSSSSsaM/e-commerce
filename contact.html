@@ -306,6 +306,23 @@
     login.onclick = function(){
         co_form.classList.remove("active")
     }
+
+var to_top =document.querySelector(".to_top");
+document.onscroll =function(){
+if(window.scrollY > 300){
+$(".to_top").show(2000)
+}else{
+$(".to_top").hide(1000)
+
+}
+}
+to_top.onclick = function(){
+window.scrollTo({
+top:0,
+behavior:"smooth",
+})
+}
+
     </script>
 </body>
 </html>
