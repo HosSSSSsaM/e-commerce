@@ -105,14 +105,16 @@ function add_items_to_html(){
     }).join("")
 }
 add_items_to_html()
+
 document.querySelector(".cart_product").innerHTML = " ur cart is empty"
-let cart;
-if(cart != ""){
-    cart = JSON.parse(localStorage.getItem("product"))
-}else{
+
+// let cart;
+// if(cart != ""){
+//     cart = JSON.parse(localStorage.getItem("product"))
+// }else{
     cart = []
-    
-}
+    // 
+// }
 function addtocart(e){
     if(products[e].quantity == 0){
         let new_quantity = products[e].quantity + 1;
