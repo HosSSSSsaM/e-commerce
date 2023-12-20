@@ -158,7 +158,7 @@ console.log(products[e].name);
 function show_products_in_cart(e){
 
     let total = 0;
-    if(cart.length==0){
+    if(cart.length==0 || cart == null){
         span.style.color = "red"
         document.querySelector(".cart_product").innerHTML = " ur cart is empty"
         total_html.innerHTML = `$0.00`
