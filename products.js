@@ -33,7 +33,7 @@ var products = [
         name : "Summer salad",
         price : 40,
         quantity : 0,
-        totall:0,
+        totall:40,
     },
     {
         id : 4,
