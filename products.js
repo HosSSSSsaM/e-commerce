@@ -119,18 +119,18 @@ add_items_to_html()
 document.querySelector(".cart_product").innerHTML = " ur cart is empty"
 
 let cart;
-// if(cart != ""){
-//     cart = JSON.parse(localStorage.getItem("product"))
-// }else{
+if(cart != ""){
+    cart = JSON.parse(localStorage.getItem("product"))
+}else{
     cart = []
-//     localStorage.setItem("product" , JSON.stringify(cart))
-// }
+    localStorage.setItem("product" , JSON.stringify(cart))
+}
 function addtocart(e){
     if(products[e].quantity == 0){
         let new_quantity = products[e].quantity + 1;
         products[e].quantity = new_quantity ;
         cart.push(products[e])
-        // localStorage.product =JSON.stringify(cart)
+        localStorage.product =JSON.stringify(cart)
         show_products_in_cart(e)
         show_popup(e)
     }
@@ -240,7 +240,7 @@ function deletee(e){
     console.log(cart);
     show_products_in_cart(e)
     if(cart.length == 0){
-        // localStorage.product =JSON.stringify(cart)
+        localStorage.product =JSON.stringify(cart)
         console.log("clear done");
         show_products_in_cart()
     }
