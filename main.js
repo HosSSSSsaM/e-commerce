@@ -135,7 +135,7 @@ function show_popup(e){
         }else{
         span.style.color = "var(--primary)"
             document.querySelector(".cart_product").innerHTML = cart.map(function(value2,key){
-                total += value2.price
+                total += value2.totall
                 total_html.innerHTML = `$${total}.00`
                 return `
                     <div class="append">
