@@ -85,12 +85,11 @@ var products = [
 ]
 
 let cart;
-if(cart != ""){
+if(localStorage.getItem("product")){
     cart = JSON.parse(localStorage.getItem("product"))
 }else{
     cart = []
     localStorage.setItem("product" , JSON.stringify(cart))
-
 }
 
 function show_popup(e){
